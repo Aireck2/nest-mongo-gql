@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  postgresdb:
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: erick
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: pgtestDB
+    volumes:
+      - ./database:/var/lib/postgresql/data
